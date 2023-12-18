@@ -228,11 +228,11 @@ capabilities.name = 'capabilities'
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 const fontLoader = new FontLoader()
-const matcapTexture = textureLoader.load('../dist/33.png')
+const matcapTexture = textureLoader.load('../static/textures/matcaps/33.png')
 
 
 fontLoader.load(
-    '../dist/fonts/helvetiker_regular.typeface.json',
+    '../static/fonts/helvetiker_regular.typeface.json',
     (font) =>
     {
 
@@ -265,7 +265,7 @@ fontLoader.load(
 	})
 
 		fontLoader.load(
-			'../dist/fonts/helvetiker_regular.typeface.json',
+			'../static/fonts/helvetiker_regular.typeface.json',
 			(font) =>
 			{
 
@@ -298,7 +298,7 @@ fontLoader.load(
 			})
 
 				fontLoader.load(
-					'../dist/fonts/helvetiker_regular.typeface.json',
+					'../static/fonts/helvetiker_regular.typeface.json',
 					(font) =>
 					{
 						// Material

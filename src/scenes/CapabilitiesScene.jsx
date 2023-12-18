@@ -117,7 +117,7 @@ const parameters = {
 };
 
 
-const matcap = textureLoader.load('../dist/8.png')
+const matcap = textureLoader.load('../static/textures/matcaps/8.png')
 const torusMaterial = new THREE.MeshMatcapMaterial({ matcap: matcap })
 
 const torusGeometry = new THREE.TorusKnotGeometry( ...Object.values( parameters ) );
@@ -133,7 +133,7 @@ scene.add( torus );
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 const fontLoader = new FontLoader()
-const matcapTexture = textureLoader.load('../dist/33.png')
+const matcapTexture = textureLoader.load('../static/textures/matcaps/33.png')
 const txtAfter = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,7 +145,7 @@ const threeTexts = ()=> {
     const txtArray = []
 
 
-    fontLoader.load('../dist/fonts/helvetiker_regular.typeface.json',(font)=> {
+    fontLoader.load('../static/fonts/helvetiker_regular.typeface.json',(font)=> {
         for (let i = 0; i < words.length; i++) {
             const textGeometry = new TextGeometry(words[i], {
                 font: font,
