@@ -1,0 +1,110 @@
+.bigmodal{
+    display: inline-grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 10vh 20vh 5vh 40vh;
+    min-width: 30%;
+    max-width: 90%;
+    min-height: 20vh;
+    max-height: 70vh;
+    background-color:rgba(213, 227, 242, 1);
+    padding: 30px;
+    align-self: center;
+    position: absolute;
+    overflow: scroll;
+    z-index: 100;
+    text-wrap: wrap;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.415);
+}
+
+.close-button{
+    grid-column: -1;
+    grid-row: 1;
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
+    -webkit-text-stroke: 2px  rgb(30, 84, 156);
+    background-color: transparent;
+    color: rgb(247, 246, 246);
+    font-weight: 900;
+    border-style: none;
+    width: 2em;
+    justify-self: end;
+}
+
+.close-button:hover{
+    scale: 1.2;;
+    color: rgb(82, 7, 153);
+}
+
+.modal-child{
+    width: auto;
+}
+
+.child0{
+    font-weight: 900;
+    font-family: Helvetica;
+    font-size: clamp(1rem, 1.5vw, 1.7rem);
+    color: rgb(30, 84, 156);
+    padding-left: 20px;
+    grid-column: 1/-1;
+    grid-row: 1;
+    align-self: center;
+}
+.child1{
+    font-weight: 500;
+    font-family: Helvetica;
+    font-size: clamp(0.9rem, 1.5vw, 1.7rem);
+    color: rgb(30, 84, 156);
+    padding-top: 0.2rem;
+    padding-left: 20px;
+    white-space: wrap;
+    grid-column: 1/-1;
+    grid-row: 2;
+}
+
+.child2{
+    grid-column: 1/-1;
+    grid-row: 2;
+    align-self: end;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.child2 a{
+    text-decoration: none;
+    font-weight: 900;
+    font-family: Helvetica;
+    font-size: clamp(1rem, 1.5vw, 1.7rem);
+    color: rgb(30, 84, 156);
+}
+.child2 a:hover{
+    scale: 1.2;
+    font-weight: 900;
+    color: rgb(82, 7, 153);
+}
+
+.child3{
+    grid-column: 1/-1;
+    grid-row: 4;
+}
+.child3 .img-container{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 1rem;
+}
+.child3 .img-container .img{
+    min-width: 100px;
+    max-width: 380px;
+    min-height: 100px;
+    max-height: 380px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.backdrop{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 20;
+}
