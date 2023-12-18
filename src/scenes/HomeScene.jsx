@@ -508,7 +508,6 @@ return (
          <a className='capabilities_link' href="/capabilities"></a>
          <a className='projects_link' href="/projects"></a>
          <a className='about_link' href="/about"></a>
-		 <p className='big-txt'>TESTIIIIIIIIIIING</p>
        </div>
 	</section>
 	<div className='break'></div>
