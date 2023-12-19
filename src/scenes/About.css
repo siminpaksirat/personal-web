@@ -28,14 +28,14 @@
 
 h1{
     font-family: Helvetica;
-    font-size: clamp(1rem, 3vw, 5rem);
+    font-size: clamp(1.2rem, 3vw, 5rem);
     font-weight: 900;
     color: rgb(30, 84, 156);
 }
 
 .par {
     font-family: Helvetica;
-    font-size: clamp(0.8rem, 3vw, 5rem);
+    font-size: clamp(1rem, 3vw, 5rem);
     font-weight: 900;
     line-height: clamp(1, 1.5vw, 2);
     text-align: left;
@@ -82,7 +82,7 @@ h1{
 
 .sec2 > p {
     font-family: Helvetica;
-    font-size: clamp(0.5rem, 2.1vw, 3rem);
+    font-size: clamp(1rem, 2.1vw, 3rem);
     font-weight: 600;
     line-height: clamp(1, 1.5vw, 2);
     text-align: center;
@@ -107,7 +107,7 @@ h1{
 
 .sec3 > p {
     font-family: Helvetica;
-    font-size: clamp(0.8rem, 2.2vw, 3rem);
+    font-size: clamp(1rem, 2.2vw, 3rem);
     font-weight: 600;
     line-height: clamp(1, 1.5vw, 2);
     text-align: center;
@@ -131,7 +131,7 @@ h1{
 }
 .sec4 > p {
     font-family: Helvetica;
-    font-size: clamp(0.8rem, 2.2vw, 3rem);
+    font-size: clamp(1rem, 2.2vw, 3rem);
     font-weight: 600;
     line-height: clamp(1, 1.5vw, 2);
     text-align: left;
@@ -154,7 +154,7 @@ h1{
     height: 100%;
     width: 100%;
     font-family: Helvetica;
-    font-size: clamp(0.7rem, 1.5vw, 3rem);
+    font-size: clamp(1rem, 1.5vw, 3rem);
     font-weight: 600;
     line-height: 1.5;
     text-align: left;
@@ -186,7 +186,7 @@ h1{
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     letter-spacing: 0.0625em;
-    font-size: clamp(0.7rem, 1.5vw, 3rem);
+    font-size: clamp(0.3rem, 1.5vw, 3rem);
     z-index: 12;
 }
 

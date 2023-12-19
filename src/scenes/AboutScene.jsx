@@ -210,7 +210,7 @@ const waterMaterial = new THREE.ShaderMaterial({
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-const lineGeo = new THREE.BoxGeometry(6,5,5,300,300,300)
+const lineGeo = new THREE.BoxGeometry(6,5,5,100,100,100)
 const line = new THREE.Points(lineGeo, waterMaterial)
 line.position.set(-1,3,3)
 MainScene.add(line)
