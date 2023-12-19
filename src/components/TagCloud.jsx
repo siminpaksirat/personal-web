@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import  { useEffect } from 'react';
 import TagCloud from "TagCloud";
+import '../scenes/About.css'
 
 
 
@@ -18,11 +19,6 @@ const TextSphere = ()=> {
         keep: true, };
   TagCloud(container, skills, options);}
 },[])
-return(
-<>
-<span className="tagcloud"></span>
-</>
-)
 }
 
 export default TextSphere;
