@@ -76,7 +76,7 @@ const About = () => {
             <section className='sec4' >
             <h1>:::: Skills ::::</h1>
             <div className='tagcloud'>
-            <span className="tagcloud"><TextSphere/></span>
+           <TextSphere/>
 
             </div>
             </section>
