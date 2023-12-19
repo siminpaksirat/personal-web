@@ -18,9 +18,9 @@ const TextSphere = ()=> {
         keep: true, };
   TagCloud(container, skills, options);
 
-  if (process.env.NODE_ENV === 'development') {
-    TagCloud(container, skills, options);
-  }
+//   if (process.env.NODE_ENV === 'development') {
+//     TagCloud(container, skills, options);
+//   }
 },[]);
 return <span className="tagcloud"></span>;
 };
