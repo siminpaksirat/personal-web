@@ -16,8 +16,8 @@ const TextSphere = ()=> {
         maxSpeed: "normal",
         initSpeed: "normal",
         keep: true, };
-        if (process.env.NODE_ENV === 'development'){
-  TagCloud(container, skills, options)};
+
+  TagCloud(container, skills, options)
 
 //   if (process.env.NODE_ENV === 'development') {
 //     TagCloud(container, skills, options);
