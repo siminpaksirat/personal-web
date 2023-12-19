@@ -5,7 +5,7 @@ import { useState } from 'react';
 import  { useEffect } from 'react';
 
 import TagCloud from "TagCloud";
-
+import TextSphere from '../components/TagCloud.jsx';
 
 const About = () => {
 
@@ -25,24 +25,25 @@ const About = () => {
         setIsScrolled(!isScrolled)
     }
 
-    const TextSphere = ()=> {
-        useEffect(()=> {
-            return()=> {
-        const container = document.querySelectorAll('.tagcloud')
-        const skills = [':::: JavaScript ::::', ':::: React - React Native ::::', ':::: Responsive Web Design ::::',':::: Version Control/Git ::::',':::: Professional Graphic Design Skills ::::',':::: Problem-Solving Skills ::::',':::: HTML/CSS ::::',':::: THREEJS ::::',':::: WebPack/Vite ::::',':::: Pyton ::::',':::: SQL ::::',':::: Revit ::::',':::: Cinema 4D ::::',':::: Maya ::::',':::: Photoshop CC ::::',':::: AutoCAD ::::',':::: Rhinoceros ::::',':::: Figma ::::']
-        const options = {
-            radius: 400,
-            maxSpeed: "normal",
-            initSpeed: "normal",
-            keep: true, };
-      TagCloud(container, skills, options);}
-    },[])
-return(
-    <>
-    <span className="tagcloud"></span>
-    </>
-)
-}
+//  const TextSphere = ()=> {
+//         useEffect(()=> {
+//             return()=> {
+//         const container = document.querySelectorAll('.tagcloud')
+//         console.log(container)
+//         const skills = [':::: JavaScript ::::', ':::: React - React Native ::::', ':::: Responsive Web Design ::::',':::: Version Control/Git ::::',':::: Professional Graphic Design Skills ::::',':::: Problem-Solving Skills ::::',':::: HTML/CSS ::::',':::: THREEJS ::::',':::: WebPack/Vite ::::',':::: Pyton ::::',':::: SQL ::::',':::: Revit ::::',':::: Cinema 4D ::::',':::: Maya ::::',':::: Photoshop CC ::::',':::: AutoCAD ::::',':::: Rhinoceros ::::',':::: Figma ::::']
+//         const options = {
+//             radius: 400,
+//             maxSpeed: "normal",
+//             initSpeed: "normal",
+//             keep: true, };
+//       TagCloud(container, skills, options);}
+//     },[])
+// return(
+//     <>
+//     <span className="tagcloud"></span>
+//     </>
+// )
+// }
 
 
     return (
@@ -74,9 +75,9 @@ return(
 
             <section className='sec4' >
             <h1>:::: Skills ::::</h1>
-            {/* <div className='tagcloud'> */}
+            <div className='tagcloud'>
                 <TextSphere/>
-            {/* </div> */}
+            </div>
             </section>
 
             <section className='sec5'></section>
