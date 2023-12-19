@@ -74,9 +74,9 @@ return(
 
             <section className='sec4' >
             <h1>:::: Skills ::::</h1>
-            <div className='.tagcloud'>
+            {/* <div className='tagcloud'> */}
                 <TextSphere/>
-            </div>
+            {/* </div> */}
             </section>
 
             <section className='sec5'></section>
