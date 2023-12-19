@@ -314,6 +314,8 @@ workSection.forEach((char)=> {
 	)
 })
 
+const tagcloud = document.querySelectorAll('.tagcloud')
+
 
 const objectsDistance = 2
 
