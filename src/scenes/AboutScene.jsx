@@ -244,7 +244,7 @@ splitTypes.forEach((char)=> {
 		scrollTrigger: {
 			trigger: '.sec1',
 			start: 'left 50%',
-			end: 'right 80%',
+			end: 'right 50%',
 			scrub: false,
 			markers: false,
 			duration: 0.2,

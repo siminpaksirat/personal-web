@@ -52,6 +52,16 @@ const About = () => {
 
 
             <section className='sec1' >
+                {/* <p className='par'>HELLO ::::</p>
+                <p className='par'>:::::::: This is Simin !</p>
+                <p className='par'>:::: I am a designer by nature ::::</p>
+                <p className='par'>I design websites ::::</p>
+                <p className='par'>Buildings ::::</p>
+                <p className='par'>Sculptures ::::</p>
+                <p className='par'>Theater stages ::::</p>
+                <p className='par'>:::::::::: And ::::::::::</p> */}
+
+
                 <p className='par'>HELLO :::: <br />:::::::: This is Simin !<br /><br />:::: I am a designer by nature ::::<br />I design websites ::::<br />Buildings ::::<br />Sculptures ::::<br />Theater stages ::::<br/><br/>:::::::::: And ::::::::::</p>
 
             </section>
