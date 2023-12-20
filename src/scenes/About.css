@@ -71,7 +71,7 @@ h1{
 
 .sec2 > p {
     font-family: Helvetica;
-    font-size: clamp(1rem, 1.8vw, 3rem);
+    font-size: clamp(1.5rem, 1.8vw, 3rem);
     font-weight: 600;
     line-height: clamp(1, 1.5vw, 2);
     text-align: center;
