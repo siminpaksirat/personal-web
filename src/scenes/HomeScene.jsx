@@ -11,7 +11,7 @@ import './Home.css';
 import waterFragmentShader from '../shaders/water/fragment.glsl';
 import waterVertexShader from '../shaders/water/vertex.glsl';
 
-
+import ResizeFunction from '../components/ReSize';
 
 const HomeScene = () => {
     useEffect(()=> {
@@ -26,30 +26,29 @@ const textureLoader = new THREE.TextureLoader()
 THREE.ColorManagement.enabled = false
 
 const canvas = document.querySelector('canvas.webgl')
-
-
-const mobile = ()=> {
-let width = window.width
-if(width < 550){
-
-}
-}
+const root = document.getElementById('root')
 
 // Function to handle window resize
-const handleResize = () => {
-	const newWidth = window.innerWidth;
-	const newHeight = window.innerHeight;
+// const handleResize = () => {
+// 	let newWidth = window.innerWidth;
+// 	let newHeight = window.innerHeight;
 
-	console.log(`window width: ${newWidth},window height: ${newHeight}`)
-	console.log(`this is canvas width: ${canvas.width}`)
+// 	console.log(`window width: ${newWidth},window height: ${newHeight}`)
+// 	console.log(`this is canvas width: ${canvas.width}`)
 
-  };
+// 	let newCanvasWidth = canvas.width
+// 	let newCanvasHeight = canvas.height;
 
-  // Event listener for window resize
-  window.addEventListener('resize', handleResize);
+// 	newCanvasWidth = newWidth;
+// 	newCanvasHeight = newHeight;
 
-  // Initial setup
-  handleResize();
+//   };
+
+//   // Event listener for window resize
+//   window.addEventListener('resize', handleResize);
+
+//   // Initial setup
+//   handleResize();
 ///////////////////////////////////////////////////////////////// Scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0xf0f0f0 );
@@ -461,6 +460,24 @@ const contactmesh = new THREE.SphereGeometry(20,300,300)
 const contactSphere = new THREE.Mesh(contactmesh, waterMaterial2)
 contactSphere.position.set(150,-10,40)
 scene.add( contactSphere );
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+const phoneSize = ()=> {
+	let winWidth = window.innerWidth;
+	let canWidth = canvas.width;
+
+	console.log(`this is window width: ${winWidth}`)
+	console.log(`this is canvas width: ${canWidth}`)
+	console.log(`this is renderer width: ${renderer.width}`)
+
+	if(winWidth <=500){
+		camera.position.z  = 120;
+		camera.position.y = -40;
+		contactSphere.position.set(100,-50,100)
+	}
+}
+
+phoneSize()
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -468,7 +485,9 @@ scene.add( contactSphere );
 function animate() {
 
 	raycaster.setFromCamera( pointer, camera );
-	const elapsedTime = clock.getElapsedTime()
+	const elapsedTime = clock.getElapsedTime();
+
+
 	camera.position.x = scrollY * 0.1
 
 	waterMaterial.uniforms.uTime.value = elapsedTime
@@ -485,13 +504,6 @@ function animate() {
     // controls.update()
 
 
-	window.addEventListener('resize',()=>{
-		if(window.innerWidth <= window.innerWidth/2){
-			camera.fov = 120
-		}
-	})
-
-
 	renderer.render( scene, camera );
 	window.requestAnimationFrame( animate );
 }
@@ -503,49 +515,38 @@ return (
     <>
 	<div className='home-wrapper'>
 
-	<section className='home'>
+<section className='home'>
        <div className='links_container' id='txt-link'>
          <a className='capabilities_link' href="/capabilities"></a>
          <a className='projects_link' href="/projects"></a>
          <a className='about_link' href="/about"></a>
        </div>
-	</section>
+</section>
+
+
 	<div className='break'></div>
 
 <section className='contact' id='contact'>
- <div className='contact-container'>
+    <div className='contact-container'>
+
 		<p className='big-txt'>:::::: Let's Connect ::::::</p>
 
-
-
 		<div className='info'>
-
 			<div className='gmail'>
-			<div className='arrow'></div>
 			<a href="mailto:simin.paksirat2@gmail.com?subject=Your%20Subject&body=Your%20Message">Contact me by mail</a>
+		</div>
 
-			</div>
-
-
-
-			<div className='social-links'>
-				<a href='https://www.linkedin.com/in/simin-paksirat/'>LN</a>
-				<a href='https://www.instagram.com/siminpaksirat/'>IG</a>
-				<a href='https://github.com/siminpaksirat'>GH</a>
-			</div>
-
+		<div className='social-links'>
+			<a href='https://www.linkedin.com/in/simin-paksirat/'>LN</a>
+			<a href='https://www.instagram.com/siminpaksirat/'>IG</a>
+			<a href='https://github.com/siminpaksirat'>GH</a>
+		</div>
 
 	</div>
 </div>
 </section>
-
-
-
-
-
-
-
 	</div>
+
 
     </>
 )

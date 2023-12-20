@@ -52,7 +52,7 @@ const About = () => {
 
 
             <section className='sec1' >
-                <p className='par'>HELLO :::: <br />:::::::: This is Simin !<br /><br />:::: I am a designer by nature ::::<br />I design websites ::::<br />Buildings ::::<br />Sculptures ::::<br />Theater stages ::::<br />:::::::::: And ::::::::::</p>
+                <p className='par'>HELLO :::: <br />:::::::: This is Simin !<br /><br />:::: I am a designer by nature ::::<br />I design websites ::::<br />Buildings ::::<br />Sculptures ::::<br />Theater stages ::::<br/><br/>:::::::::: And ::::::::::</p>
 
             </section>
 

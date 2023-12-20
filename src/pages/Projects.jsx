@@ -28,7 +28,7 @@ useEffect(() => {
             <div className="modal" key={project.id} id="mod" onClick={()=> {setIsModalOpen(true), setCurrentProject(project)}}>
                 <div className="hidden" key={project.id}>{project.tag}{project.imgs}</div>
                 <div className="pic">
-                    <img src={project.src} alt={project.name}/>
+                    <img id='coverimg' src={project.src} alt={project.name}/>
                 </div>
                 <div className="text">
                     <h3>:::: {project.name} ::::</h3>
@@ -59,6 +59,11 @@ useEffect(() => {
         return arr.map((img, index) => (
           <img className='img' key={index} src={img} alt={`Image ${index}`} />
         ));
+      }
+
+
+      const ResizeImg = ()=> {
+        let img = document.getElementById('coverimg')
       }
 
 

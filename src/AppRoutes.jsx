@@ -18,7 +18,6 @@ const AppRoutes = () => {
             <Route path="/capabilities" element={<Capabilities/>} />
 
         </Routes>
-
         </>
     )
 }

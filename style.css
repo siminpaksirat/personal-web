@@ -7,6 +7,8 @@
 body,html {
     overflow-x: hidden;
     height: 100vh;
+    width: 100vw;
+
 }
 
 .webgl {
@@ -15,8 +17,8 @@ body,html {
     left: 0;
     z-index: 1;
     background-color: transparent;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 #root{
@@ -24,7 +26,8 @@ body,html {
     grid-template-columns: 18% 64% 18%;
     gap: 10px;
     z-index: 2;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     position: absolute;
     background: transparent;
@@ -63,4 +66,28 @@ html.lenis {
 
   .lenis.lenis-scrolling iframe {
     pointer-events: none;
+  }
+
+
+  @media screen and (max-width: 500px){
+
+    .webgl {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: transparent;
+  }
+
+    #root{
+      display: inline-grid;
+      grid-template-columns: 18% 64% 18%;
+      gap: 10px;
+      z-index: 2;
+      height: 100vh;
+      margin: 0;
+      position: absolute;
+      background: transparent;
+  }
+
   }

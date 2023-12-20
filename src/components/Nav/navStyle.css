@@ -21,7 +21,7 @@ nav {
 ul a {
     width: 100%;
     font-family: Helvetica;
-    font-size: 55px;
+    font-size: clamp(3rem, 7vw, 20rem);
     font-weight: 900;
     text-decoration: none;
     list-style: none;
@@ -38,7 +38,7 @@ ul a:hover {
 }
 
 .links {
-    height: 60%;
+    height: 80%;
     display: flex;
     padding-top: 200px;
     flex-direction: column;
@@ -52,7 +52,6 @@ ul a:hover {
 }
 
 .burger-menu {
-    grid-column: 2 / 3;
     height: 50%;
     width: 3em;
     display: flex;
@@ -144,4 +143,96 @@ ul a:hover {
 .burger-bar.unclicked {
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+
+@media screen and (max-width: 500px){
+
+    nav{
+        width: 100vw;
+        height: 100px;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    .homeButton {
+        padding: 30px;
+        padding-top: 60px;
+        width: auto;
+        font-family: Helvetica;
+        font-size: clamp(1.5rem, 2.5vw, 4rem);
+        font-weight: 900;
+        text-decoration: none;
+        color:  rgb(30, 84, 156);
+        z-index: 8;
+        height: 50%;
+    }
+
+
+    .burger-menu {
+        height: 35%;
+        width: 20px;
+        display: grid;
+        row-gap: 0.1rem;
+        cursor: pointer;
+        padding-top: 73px;
+        z-index: 8;
+        align-content: space-evenly;
+    }
+
+    .burger-bar {
+        width: 6vw;
+        height: 1vw;
+        background-color: rgb(30, 84, 156);
+        border-radius: 0.5em;
+        transition: 3s;
+    }
+
+    .links {
+        height: 50%;
+        display: flex;
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+        row-gap: 2px;
+        cursor: pointer;
+        list-style-type: none;
+        z-index: 9;
+    }
+
+    .burger-bar.clicked:nth-child(1){
+        transform: rotate(45deg) translate(4em, -3.5em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(2){
+        transform: scale(0.01);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.clicked:nth-child(3){
+        transform: rotate(135deg) translate(-4em, -3.5em);
+        transition: ease-out 0.5s;
+    }
+
+    .burger-bar.unclicked {
+        transform: rotate(0) translate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+        margin-left: 4rem;
+    }
+
+    ul a {
+        width: 100%;
+        font-family: Helvetica;
+        font-size: clamp(2rem, 7vw, 20rem);
+        font-weight: 900;
+        text-decoration: none;
+        list-style: none;
+        color:rgb(255, 255, 255);
+        -webkit-text-stroke: 1.8px rgb(30, 84, 156);
+        z-index: 9;
+    }
+
 }
