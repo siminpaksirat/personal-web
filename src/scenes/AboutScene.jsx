@@ -244,7 +244,7 @@ splitTypes.forEach((char)=> {
 		scrollTrigger: {
 			trigger: '.sec1',
 			start: 'left 50%',
-			end: 'right 50%',
+			end: 'right 20%',
 			scrub: false,
 			markers: false,
 			duration: 0.2,
@@ -274,7 +274,7 @@ educationSection.forEach((char)=> {
 		scrollTrigger: {
 			trigger: '.sec2',
 			start: 'left 50%',
-			end: 'right 40%',
+			end: 'right 20%',
 			scrub: false,
 			markers: false,
 			duration: 0.2,
@@ -304,7 +304,7 @@ workSection.forEach((char)=> {
 		scrollTrigger: {
 			trigger: '.sec3',
 			start: 'left 50%',
-			end: 'right 40%',
+			end: 'right 20%',
 			scrub: false,
 			markers: false,
 			duration: 0.2,
