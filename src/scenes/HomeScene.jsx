@@ -28,27 +28,6 @@ THREE.ColorManagement.enabled = false
 const canvas = document.querySelector('canvas.webgl')
 const root = document.getElementById('root')
 
-// Function to handle window resize
-// const handleResize = () => {
-// 	let newWidth = window.innerWidth;
-// 	let newHeight = window.innerHeight;
-
-// 	console.log(`window width: ${newWidth},window height: ${newHeight}`)
-// 	console.log(`this is canvas width: ${canvas.width}`)
-
-// 	let newCanvasWidth = canvas.width
-// 	let newCanvasHeight = canvas.height;
-
-// 	newCanvasWidth = newWidth;
-// 	newCanvasHeight = newHeight;
-
-//   };
-
-//   // Event listener for window resize
-//   window.addEventListener('resize', handleResize);
-
-//   // Initial setup
-//   handleResize();
 ///////////////////////////////////////////////////////////////// Scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0xf0f0f0 );
@@ -66,9 +45,6 @@ window.addEventListener('mousemove', (event) =>
     cursor.y = event.clientY / sizes.height - 0.5
 })
 ////////////////////////
-
-
-
 
 //////////////////////////////////////////////////////////////////////////// Camera
 let camera = new THREE.PerspectiveCamera( 85, window.innerWidth / window.innerHeight, 0.1, 1000 );

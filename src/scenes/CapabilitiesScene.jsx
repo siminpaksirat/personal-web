@@ -63,28 +63,32 @@ useEffect(()=> {
 
 
 	///////////////////////////////////////////////////////////////// Resize
-	const sizes = {
-		width: window.innerWidth,
-		height: window.innerHeight
-	}
-	window.addEventListener('resize', () =>
-	{
-		// Update sizes
-		sizes.width = window.innerWidth
-		sizes.height = window.innerHeight
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
 
-		// Update camera
-		camera.aspect = sizes.width / sizes.height
-		camera.updateProjectionMatrix()
+    window.addEventListener('resize', () =>
+    {
+        // Update sizes
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
 
-		// Update renderer
-		renderer.setSize(sizes.width, sizes.height)
-		renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-	})
-		//////////////////////////////////////////////////////////////////////////// Camera
-		const camera = new THREE.PerspectiveCamera( 85, window.innerWidth / window.innerHeight, 0.01, 2000);
-		camera.updateProjectionMatrix();
-		////////////////////////
+        // Update camera
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+
+        // Update renderer
+        renderer.setSize(sizes.width, sizes.height)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    })
+
+	//////////////////////////////////////////////////////////////////////////// Camera
+	const camera = new THREE.PerspectiveCamera( 85, window.innerWidth / window.innerHeight, 0.01, 2000);
+	camera.minDistance = 2
+    camera.maxDistance = 10
+    camera.updateProjectionMatrix();
+
 	////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////// Renderer
 const renderer = new THREE.WebGLRenderer({
@@ -187,7 +191,6 @@ const threeTexts = ()=> {
          }
     })
     txtArray
-    console.log(txtArray)
 
 }
 threeTexts()
@@ -269,7 +272,7 @@ controls.enableRotate = false;
 controls.adjustNearFar = true
 controls.enablePan = true
 controls.enableZoom = true
-controls.cursorZoom = false
+controls.cursorZoom = true
 controls.maxDistance = 65
 controls.minDistance = 0
 controls.scaleFactor = 1.3
@@ -301,11 +304,11 @@ let fov = camera.fov
 let zoom = 1.0
 let inc = -0.009
 
-window.addEventListener('wheel', onMouseWheel)
-let y = 8.5
-// let x = 0
-// let z = 50
-let position = 0
+// window.addEventListener('wheel', onMouseWheel)
+// let y = 8.5
+// // let x = 0
+// // let z = 50
+// let position = 0
 
 
 function onMouseWheel(event){
@@ -321,7 +324,7 @@ function onMouseWheel(event){
 
 
 
-// doc.addEventListener('wheel', onMouseWheel)
+window.addEventListener('wheel', onMouseWheel)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -332,17 +335,13 @@ function animate() {
 	const elapsedTime = clock.getElapsedTime()
 	waterMaterial.uniforms.uTime.value = elapsedTime
 
-
-
-    camera.updateMatrixWorld();
-
     const time = performance.now() * 0.0003;
     const torus = scene.getObjectByName( 'torus' );
     torus.rotation.x = time * 0.4;
     torus.rotation.y = time;
-
+    
+    camera.updateProjectionMatrix();
 	camera.lookAt( torus.position );
-
 
 	renderer.render( scene, camera );
 	window.requestAnimationFrame( animate );

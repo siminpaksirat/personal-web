@@ -130,22 +130,22 @@
 
 .capabilities_link{
     display: flex;
-    grid-column: 4/7;
-    grid-row: 3/6;
+    grid-column: 5/8;
+    grid-row: 3/7;
     width: 100%;
 
 }
 .projects_link{
     display: flex;
-    grid-column: 11/15;
-    grid-row: 4/7;
+    grid-column: 10/14;
+    grid-row: 4/8;
     width: 100%;
 }
 
 .about_link{
     display: flex;
     grid-column: 6/10;
-    grid-row: 11/14;
+    grid-row: 9/14;
 width: 100%;
 }
 
