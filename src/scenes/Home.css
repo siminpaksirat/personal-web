@@ -251,10 +251,9 @@ width: 100%;
 
     .gmail a{
         font-family: Helvetica;
-        font-size: clamp(1.2rem, 2.5vw, 3.5rem);
+        font-size: clamp(1.5rem, 2.7vw, 3.5rem);
         color:  rgb(30, 84, 156);
         font-weight: 900;
-        text-decoration: line-through;
     }
 
 

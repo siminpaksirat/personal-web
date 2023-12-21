@@ -155,15 +155,16 @@
       margin: 0;
       white-space: nowrap;
       justify-content: center;
+      justify-items: center;
       align-content: space-between;
-      gap: 30px;
+      gap: 50px;
     }
 
     .modal{
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         background-color: rgba(80, 87, 87, 0.089);
-        padding: 20px;
+        padding: 15px;
         align-self: center;
         justify-items: center;
     }

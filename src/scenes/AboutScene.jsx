@@ -238,7 +238,7 @@ splitTypes.forEach((char)=> {
 	},
 	{
 		scaleY: 1,
-		x: 120,
+		x: 10,
 		duration: 0.7,
 		stagger: 0.02,
 		scrollTrigger: {
