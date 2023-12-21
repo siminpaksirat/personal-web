@@ -21,7 +21,7 @@ nav {
 ul a {
     width: 100%;
     font-family: Helvetica;
-    font-size: clamp(3rem, 5vw, 20rem);
+    font-size: clamp(2.5rem, 4vw, 5rem);
     font-weight: 900;
     text-decoration: none;
     list-style: none;
