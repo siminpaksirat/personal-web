@@ -169,10 +169,10 @@ const waterMaterial = new THREE.ShaderMaterial({
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-const projectsMesh = new THREE.SphereGeometry(12,42,300)
-const aboutMesh = new THREE.SphereGeometry(9,42,592)
-const capaMesh = new THREE.ConeGeometry( 12, 22, 50, 200);
-const capaMesh2 = new THREE.ConeGeometry( 12, 22, 50, 200);
+const projectsMesh = new THREE.SphereGeometry(12,42,200)
+const aboutMesh = new THREE.SphereGeometry(9,42,292)
+const capaMesh = new THREE.ConeGeometry( 12, 22, 50, 100);
+const capaMesh2 = new THREE.ConeGeometry( 12, 22, 50, 100);
 
 const projects = new THREE.Points(projectsMesh, waterMaterial)
 const about = new THREE.Points(aboutMesh, waterMaterial)
@@ -211,6 +211,8 @@ fontLoader.load(
     (font) =>
     {
 
+
+
         // Material
         const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
@@ -233,11 +235,20 @@ fontLoader.load(
         const text = new THREE.Mesh(textGeometry, material)
 		text.name = 'projects'
 
-		text.position.set(29,5,11)
-        text.rotation.x = Math.PI / 12
-        text.rotation.y = Math.PI / 6
+		let winWidth = window.innerWidth;
+		if(winWidth < 500){
+			text.position.set(10,25,50)
+			text.rotation.x = Math.PI / 8
+            text.rotation.y = Math.PI / 6
+		} else {
+			text.position.set(29,5,11)
+			text.rotation.x = Math.PI / 12
+            text.rotation.y = Math.PI / 6
+		}
         scene.add(text)
 	})
+
+
 
 		fontLoader.load(
 			'/fonts/helvetiker_regular.typeface.json',
@@ -267,8 +278,18 @@ fontLoader.load(
 				const text = new THREE.Mesh(textGeometry, material)
 				text.name = 'about'
 
-				text.position.set(-3,-25,18)
-                text.rotation.x = Math.PI / 6
+				let winWidth = window.innerWidth;
+		        if(winWidth < 500){
+					text.position.set(-3,-45,70)
+                    text.rotation.x = Math.PI / 6
+
+				} else {
+					text.position.set(-3,-25,18)
+                    text.rotation.x = Math.PI / 6
+
+				}
+
+
 				scene.add(text)
 			})
 
@@ -299,9 +320,21 @@ fontLoader.load(
 						const text = new THREE.Mesh(textGeometry, material)
 						text.name = 'capabilities'
 
-						text.position.set(-20,10,9)
-                        text.rotation.y = Math.PI /3
-                        text.rotation.x = Math.PI / 4
+						let winWidth = window.innerWidth;
+		                if(winWidth < 500){
+							text.position.set(-18,-5,40)
+							text.rotation.y = Math.PI /8
+							text.rotation.x = Math.PI / 4
+							text.rotation.z = Math.PI / 4
+
+						} else {
+							text.position.set(-20,10,9)
+							text.rotation.y = Math.PI /3
+							text.rotation.x = Math.PI / 4
+
+						}
+
+
 						scene.add(text)
 					})
 
@@ -442,14 +475,17 @@ const phoneSize = ()=> {
 	let winWidth = window.innerWidth;
 	let canWidth = canvas.width;
 
-	console.log(`this is window width: ${winWidth}`)
-	console.log(`this is canvas width: ${canWidth}`)
-	console.log(`this is renderer width: ${renderer.width}`)
-
 	if(winWidth <=500){
 		camera.position.z  = 120;
 		camera.position.y = -40;
-		contactSphere.position.set(100,-50,100)
+		contactSphere.position.set(130,-50,100)
+		projects.position.set(10,25,50)
+        about.position.set(-3,-44,78)
+		capabilities1.position.set(-20,10,40)
+        capabilities2.position.set(-20,-10,40)
+
+
+
 	}
 }
 

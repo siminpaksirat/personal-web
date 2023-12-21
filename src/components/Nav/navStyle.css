@@ -233,4 +233,12 @@ ul a:hover {
         z-index: 9;
     }
 
+    .homeButton:hover{
+        color:  rgb(249, 252, 254);
+        -webkit-text-stroke: 0.7px  rgb(30, 84, 156);
+        font-size: clamp(1.6rem, 2.6vw, 4.1rem);
+        transition: 0.5s ease-in-out;
+        scale: 1.1;
+    }
+
 }

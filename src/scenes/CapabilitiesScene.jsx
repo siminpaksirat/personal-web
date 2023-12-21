@@ -320,11 +320,13 @@ function onMouseWheel(event){
       if ( zoom <= 0.1 || zoom >= 1.0 ){
          inc = -inc;
        }
+       camera.updateProjectionMatrix();
 }
 
 
 
-window.addEventListener('move', onMouseWheel)
+window.addEventListener('wheel', onMouseWheel)
+window.addEventListener('touchmove', onMouseWheel)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -342,6 +344,7 @@ function animate() {
 
     camera.updateProjectionMatrix();
 	camera.lookAt( torus.position );
+
 
 	renderer.render( scene, camera );
 	window.requestAnimationFrame( animate );

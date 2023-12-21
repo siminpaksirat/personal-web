@@ -182,28 +182,28 @@ width: 100%;
         z-index: -5;
         position: relative;
         background: transparent;
-        padding-top: 12rem;
+        padding-top: 8rem;
         gap: 1rem;
     }
 
     .capabilities_link{
         display: flex;
-        grid-column: 3/6;
-        grid-row: 4/6;
+        grid-column: 2/6;
+        grid-row: 4/7;
         width: 100%;
 
     }
     .projects_link{
         display: flex;
-        grid-column: 8/11;
-        grid-row: 4/6;
+        grid-column: 6/10;
+        grid-row: 1/4;
         width: 100%;
     }
 
     .about_link{
         display: flex;
-        grid-column: 5/7;
-        grid-row: 6/9;
+        grid-column: 3/8;
+        grid-row: 8/11;
     width: 100%;
     }
 
