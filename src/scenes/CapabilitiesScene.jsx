@@ -324,7 +324,7 @@ function onMouseWheel(event){
 
 
 
-window.addEventListener('wheel', onMouseWheel)
+window.addEventListener('move', onMouseWheel)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -339,7 +339,7 @@ function animate() {
     const torus = scene.getObjectByName( 'torus' );
     torus.rotation.x = time * 0.4;
     torus.rotation.y = time;
-    
+
     camera.updateProjectionMatrix();
 	camera.lookAt( torus.position );
 

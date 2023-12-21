@@ -161,4 +161,17 @@
         align-self: center;
     }
 
+    .close-button{
+        grid-column: -1;
+        grid-row: 1;
+        font-size: clamp(1.5rem, 2.5vw, 4rem);
+        -webkit-text-stroke: 1px  rgb(30, 84, 156);
+        background-color: transparent;
+        color: rgb(247, 246, 246);
+        font-weight: 900;
+        border-style: none;
+        width: 2em;
+        justify-self: end;
+    }
+
 }
