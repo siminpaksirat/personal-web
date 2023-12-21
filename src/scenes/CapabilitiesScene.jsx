@@ -144,7 +144,7 @@ const txtAfter = new THREE.MeshMatcapMaterial({ matcap: matcapTexture })
 
 const threeTexts = ()=> {
     const words = ['Critical Thinking', 'Problem-Solving', 'Abstract Thinking', 'Creative Thinking', 'Interdisciplinary Thinking', 'adaptability']
-    const zDistance = [45, 30 , 10 , -30, -90 , -170]
+    const zDistance = [30, 0 , -30 , -50, -90 , -130]
     const yDistance = [1,2,3,5,6,8]
     const txtArray = []
 
@@ -166,7 +166,7 @@ const threeTexts = ()=> {
             const text = new THREE.Mesh(textGeometry, txtAfter)
             text.position.z = zDistance[i]
             text.position.y = yDistance[i]
-            text.rotation.x = -Math.PI / 5
+            text.rotation.x = -Math.PI / 8
 
             txtArray.push(text)
 
@@ -294,7 +294,7 @@ renderer.domElement.style.position = 'absolute';
 renderer.domElement.style.top = 0;
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //////// ----- Camera.Position -----  /////////
-camera.position.z = 60
+camera.position.z = 80
 camera.position.x = 0
 camera.position.y = 8.5
 // controls.update();
@@ -311,22 +311,24 @@ let inc = -0.009
 // let position = 0
 
 
-function onMouseWheel(event){
+// function onMouseWheel(event){
 
-	camera.position.z -= event.deltaZ * 0.01
-	camera.position.y  = 8.5
-	camera.fov = fov * zoom
-	zoom += inc;
-      if ( zoom <= 0.1 || zoom >= 1.0 ){
-         inc = -inc;
-       }
-       camera.updateProjectionMatrix();
-}
+// 	camera.position.z -= event.deltaZ * 0.01
+// 	camera.position.y  = 8.5
+// 	camera.fov = fov * zoom
+// 	zoom += inc;
+//       if ( zoom <= 0.1 || zoom >= 1.0 ){
+//          inc = -inc;
+//        }
+//        camera.updateProjectionMatrix();
+// }
 
 
 
-window.addEventListener('wheel', onMouseWheel)
-window.addEventListener('touchmove', onMouseWheel)
+// window.addEventListener('wheel', onMouseWheel)
+// window.addEventListener('touchmove', onMouseWheel)
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -344,6 +346,16 @@ function animate() {
 
     camera.updateProjectionMatrix();
 	camera.lookAt( torus.position );
+
+    camera.position.z -= time * 0.06;
+    if (camera.position.z < -200) {
+        camera.position.z = -200;
+    } else if (camera.position.z > 80) {
+        camera.position.z = 80;
+    }
+
+
+
 
 
 	renderer.render( scene, camera );
