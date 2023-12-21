@@ -456,7 +456,7 @@ const waterMaterial2 = new THREE.ShaderMaterial({
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-const contactmesh = new THREE.SphereGeometry(20,300,300)
+const contactmesh = new THREE.SphereGeometry(30,300,300)
 const contactSphere = new THREE.Mesh(contactmesh, waterMaterial2)
 contactSphere.position.set(150,-10,40)
 scene.add( contactSphere );
