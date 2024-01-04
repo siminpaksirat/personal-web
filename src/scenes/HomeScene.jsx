@@ -549,7 +549,7 @@ return (
 		</div>
 
 		<div className='social-links'>
-			<a href='https://www.linkedin.com/in/simin-paksirat/'>LN</a>
+			<a href='https://www.linkedin.com/in/simin-paksirat/'>iN</a>
 			<a href='https://www.instagram.com/siminpaksirat/'>IG</a>
 			<a href='https://github.com/siminpaksirat'>GH</a>
 		</div>
