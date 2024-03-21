@@ -56,7 +56,7 @@ const About = () => {
             <section className='sec1' >
                 <div>
                     <button>
-                        <a href='https://drive.google.com/drive/folders/1X0nYqwBLb8rK7MZ8JWE1te36WhdtFyHq' download='simin.paksirat-resume'> DOWNLOAD</a>
+                        <a href='/simin-paksirat-resume.pdf' download='simin.paksirat-resume'> DOWNLOAD</a>
                     </button>
                 </div>
                 {/* <p className='par'>HELLO ::::</p>
