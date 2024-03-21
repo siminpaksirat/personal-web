@@ -7,6 +7,8 @@ import  { useEffect } from 'react';
 import TagCloud from "TagCloud";
 import TextSphere from '../components/TagCloud.jsx';
 
+
+
 const About = () => {
 
     const[currentSection, setCurrentSection] = useState('section hidden');
@@ -52,6 +54,11 @@ const About = () => {
 
 
             <section className='sec1' >
+                <div>
+                    <button>
+                        <a href='https://drive.google.com/drive/folders/1X0nYqwBLb8rK7MZ8JWE1te36WhdtFyHq' download='simin.paksirat-resume'> DOWNLOAD</a>
+                    </button>
+                </div>
                 {/* <p className='par'>HELLO ::::</p>
                 <p className='par'>:::::::: This is Simin !</p>
                 <p className='par'>:::: I am a designer by nature ::::</p>
