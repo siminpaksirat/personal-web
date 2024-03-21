@@ -56,7 +56,7 @@ const About = () => {
             <section className='sec1' >
                 <div>
                     <button>
-                        <a href='/simin-paksirat-resume.pdf' download='simin.paksirat-resume'> DOWNLOAD</a>
+                        <a href='/simin-paksirat-resume.pdf' download='simin.paksirat-resume.pdf'> DOWNLOAD</a>
                     </button>
                 </div>
                 {/* <p className='par'>HELLO ::::</p>
