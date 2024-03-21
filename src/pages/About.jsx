@@ -49,16 +49,22 @@ const About = () => {
 
     return (
         <>
+
         <div className='about-page_wrapper' onScroll={updateSection}>
 
+            <button className='download-button'>
+
+                <a href='public/simin.paksirat-resume.pdf' download='simin.paksirat-resume.pdf' className='resume'>
+                {/* <img src='public/26.png' alt='download-icn' className='gradient'></img> */}
+                     RESUME
+                     </a>
+            </button>
 
 
             <section className='sec1' >
-                <div>
-                    <button>
-                        <a href='public/simin.paksirat-resume.pdf' download='simin.paksirat-resume.pdf'> DOWNLOAD</a>
-                    </button>
-                </div>
+
+
+
                 {/* <p className='par'>HELLO ::::</p>
                 <p className='par'>:::::::: This is Simin !</p>
                 <p className='par'>:::: I am a designer by nature ::::</p>
@@ -98,6 +104,7 @@ const About = () => {
 
             <section className='sec5'></section>
             </div>
+
 
 
         <AboutScene/>

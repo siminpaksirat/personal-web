@@ -317,12 +317,16 @@ workSection.forEach((char)=> {
 const tagcloud = document.querySelectorAll('.tagcloud')
 
 
+
+
+
 const objectsDistance = 2
 
 let scrollY = window.scrollY
 window.addEventListener('scroll', ()=> {
 	scrollY = window.scrollY
 })
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 function animate() {
