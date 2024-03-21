@@ -68,14 +68,14 @@ const About = () => {
 
             <section className='sec2'>
                 <h1>:::: EDUCATION ::::</h1>
-                <p className='par'>:::: Bachelore of Architecture :::: Azad University of Tehran - Iran ::::</p>
+                <p className='par'>:::: Bachelor of Architecture :::: Azad University of Tehran - Iran ::::</p>
                 <p className='par'>:::: MArch Architectural Design :::: University of Illinois At Chicago - USA ::::</p>
-                <p className='par'>:::: Full Stack Devveloper :::: FullStack Academy - USA ::::</p>
+                <p className='par'>:::: Full Stack Developer :::: FullStack Academy - USA ::::</p>
             </section>
 
             <section className='sec3'>
             <h1>:::: Work Experience ::::</h1>
-                <p className='par'>:::: 2022-2023 :::: Freelance Web-Developer ::::</p>
+                <p className='par'>:::: 2023-Present :::: Freelance Web-Developer ::::</p>
                 <p className='par'>:::: 2020-2022 :::: Architectural Designer ::::</p>
                 <p className='par'>:::: 2017-2019 :::: CAD Specialist - GA ::::</p>
                 <p className='par'>:::: 2018 - 2018 :::: Architectural Designer ::::</p>

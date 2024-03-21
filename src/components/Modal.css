@@ -1,7 +1,7 @@
 .bigmodal{
     display: inline-grid;
     grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 10vh 20vh 5vh 40vh;
+    grid-template-rows: 20vh 22vh 12vh 40vh;
     width: 70%;
     height: 70vh;
     background-color:rgba(213, 227, 242, 1);
