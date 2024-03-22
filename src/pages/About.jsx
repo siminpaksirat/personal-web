@@ -56,7 +56,7 @@ const About = () => {
 
                 <a href='public/simin.paksirat-resume.pdf' download='simin.paksirat-resume.pdf' className='resume'>
                 {/* <img src='public/26.png' alt='download-icn' className='gradient'></img> */}
-                     RESUME
+                     Download Resume
                      </a>
             </button>
 
