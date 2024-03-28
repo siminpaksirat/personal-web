@@ -2,14 +2,18 @@ import React from 'react';
 import AboutScene from '../scenes/AboutScene.jsx';
 import '../scenes/About.css'
 import { useState } from 'react';
-import  { useEffect } from 'react';
+import  { useEffect, useRef } from 'react';
 
 import TagCloud from "TagCloud";
 import TextSphere from '../components/TagCloud.jsx';
 
 
+import gsap from 'gsap';
+
+
 
 const About = () => {
+
 
     const[currentSection, setCurrentSection] = useState('section hidden');
     const[movement, setMovement]= useState(window.scrollY)
@@ -54,14 +58,14 @@ const About = () => {
 
             <button className='download-button'>
 
-                <a href='public/simin.paksirat-resume.pdf' download='simin.paksirat-resume.pdf' className='resume'>
+                <a href='public/simin.paksirat-resume.pdf' download='simin.paksirat-resume.pdf' className='resume' >
                 {/* <img src='public/26.png' alt='download-icn' className='gradient'></img> */}
                      Download Resume
                      </a>
             </button>
 
 
-            <section className='sec1' >
+            <section className='sec1'>
 
 
 

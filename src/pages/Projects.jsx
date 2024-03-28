@@ -7,6 +7,8 @@ import { architectureSeedData, artSeedData, webDevSeedData } from "../scenes/see
 
 import Modal from '../components/Modal';
 
+import { motion as m} from "framer-motion"
+
 
 const Projects = () => {
 

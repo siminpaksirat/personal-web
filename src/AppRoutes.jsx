@@ -6,7 +6,10 @@ import Projects from './pages/Projects.jsx';
 
 import NavBar from './components/Nav/NavBar.jsx';
 
+
+
 const AppRoutes = () => {
+
     return (
         <>
         <NavBar/>

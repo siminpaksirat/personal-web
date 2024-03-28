@@ -38,14 +38,14 @@ ul a:hover {
 }
 
 .links {
-    height: 80%;
+    height: 60%;
     display: flex;
-    padding-top: 200px;
+    padding-top: 100px;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     justify-content: space-between;
-    row-gap: 2px;
+    row-gap: 4px;
     cursor: pointer;
     list-style-type: none;
     z-index: 9;
@@ -97,6 +97,9 @@ ul a:hover {
 }
 
 .menu {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     background-color: rgb(193, 205, 229);
@@ -104,6 +107,7 @@ ul a:hover {
     top: 0;
     justify-content: center;
     z-index: 5;
+
 }
 
 /* ------------- sliding menu ------------------ */
@@ -117,7 +121,6 @@ ul a:hover {
     align-items: center;
     justify-content: center;
     justify-items: center;
-    padding-bottom: 10rem;
 }
 
 /* ----- animations--------- */
@@ -242,3 +245,49 @@ ul a:hover {
     }
 
 }
+
+
+
+.split-page-container {
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Prevents scrollbars from appearing during the animation */
+    z-index: 10;
+    top: 0;
+  left: 0;
+  }
+
+  .panel {
+    width: 100vw; /* Half the viewport width */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .left-panel {
+    background-color: #326bd5;
+    height: 50%;
+    width: 100vw;
+    position: absolute;
+    align-self: center;
+    bottom: 50%;
+    justify-content: flex-start;
+  }
+
+  .right-panel {
+    background-color: #326bd5;
+    height: 50%;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    align-self: center;
+
+  }

@@ -13,8 +13,14 @@ import waterVertexShader from '../shaders/water/vertex.glsl';
 
 import ResizeFunction from '../components/ReSize';
 
+import highway from "@dogstudio/highway";
+import gsap from 'gsap';
+import { ClipPath } from '@react-pdf/renderer';
+
 const HomeScene = () => {
     useEffect(()=> {
+
+		const tl = gsap.timeline({paused: true})
 
 
 
@@ -558,6 +564,11 @@ return (
 </div>
 </section>
 	</div>
+	{/* <script>
+		const abt = document.querySelector('.about_link')
+
+		tl.to({abt}, {{ClipPath: 'polygon(0 0, 48% 53%, 100% 100%, 0% 100%)'}})
+	</script> */}
 
 
     </>
