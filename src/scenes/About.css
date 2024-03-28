@@ -66,12 +66,15 @@ h1{
 .download-button a {
     display: inline-block;
     font-family: Helvetica;
-    color:  rgb(121, 19, 105);
+    color:  rgb(255, 255, 255);
     font-size: clamp(1.2rem, 2.4vw, 3rem);
     font-weight: 900;
     line-height: 4vw;
     position: fixed;
-    padding-top: 3rem;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: rgba(32, 13, 118, 0.644);
+    border-radius: 3rem;
 }
 
 .sec1{

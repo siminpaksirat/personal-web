@@ -45,7 +45,7 @@ const MainScene = new THREE.Scene();
 MainScene.background = new THREE.Color( 0xf0f0f0 );
 
 //////////////////////////////////////////////////////////////////////////// Camera
-const camera = new THREE.PerspectiveCamera( 85, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 65, window.innerWidth / window.innerHeight, 0.1, 1000 );
 camera.minDistance = 2
 camera.maxDistance = 10
 camera.updateProjectionMatrix();
@@ -217,9 +217,9 @@ MainScene.add(line)
 ////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //////// ----- Camera.Position -----  /////////
-camera.position.z = 4
-camera.position.x = -1
-camera.position.y = -0.3
+camera.position.z = 12
+camera.position.x = -1.5
+camera.position.y = 6
 // controls.update();
 MainScene.add( camera);
 
